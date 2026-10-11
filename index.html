@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الملفات الأكاديمية | الجامعات الأردنية</title>
+
+<style>
+:root {
+    --navy: #101d35;
+    --navy2: #1b3153;
+    --gold: #c7a45d;
+    --light: #f4f6fa;
+    --white: #ffffff;
+    --text: #29364a;
+    --muted: #748094;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.9;
+}
+
+header {
+    background: linear-gradient(135deg, #101d35, #233d63);
+    color: white;
+    text-align: center;
+    padding: 65px 20px 55px;
+    border-bottom: 5px solid var(--gold);
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 32px;
+}
+
+header h1 {
+    font-size: clamp(26px, 4vw, 42px);
+    margin: 5px 0;
+}
+
+header p {
+    color: #d8e0ec;
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+.subtitle {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 17px;
+    box-shadow: 0 4px 15px #00000008;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navy);
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .2s;
+}
+
+nav a:hover {
+    background: var(--navy);
+    color: white;
+}
+
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 25px 18px 50px;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.intro h2 {
+    color: var(--navy);
+    font-size: 25px;
+}
+
+.gold-line {
+    width: 65px;
+    height: 3px;
+    background: var(--gold);
+    margin: 12px auto;
+}
+
+.profile {
+    background: white;
+    border: 1px solid #e4e8ef;
+    border-radius: 16px;
+    margin: 25px 0;
+    overflow: hidden;
+    box-shadow: 0 10px 35px #1728440a;
+}
+
+.profile-header {
+    background: linear-gradient(120deg, var(--navy), var(--navy2));
+    color: white;
+    padding: 27px;
+    border-bottom: 3px solid var(--gold);
+}
+
+.profile-header small {
+    color: #e3c984;
+}
+
+.profile-header h2 {
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.profile-header p {
+    margin: 0;
+    color: #d8e0ec;
+}
+
+.profile-body {
+    padding: 27px;
+}
+
+h3 {
+    color: var(--navy);
+    border-right: 3px solid var(--gold);
+    padding-right: 12px;
+    margin-top: 28px;
+}
+
+.facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 13px;
+    margin: 20px 0;
+}
+
+.fact {
+    background: #f7f8fb;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.fact span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.fact strong {
+    color: var(--navy);
+}
+
+ul {
+    padding-right: 23px;
+}
+
+li {
+    padding: 4px 0;
+}
+
+.note {
+    background: #fff8e9;
+    border-right: 4px solid var(--gold);
+    border-radius: 7px;
+    padding: 15px;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.source {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin: 7px 0;
+    font-size: 14px;
+}
+
+.source:hover {
+    background: #294a78;
+}
+
+footer {
+    background: var(--navy);
+    color: #d8e0ec;
+    text-align: center;
+    padding: 27px 15px;
+    border-top: 4px solid var(--gold);
+    font-size: 13px;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+    header { padding: 42px 15px; }
+    .profile-body { padding: 18px; }
+    .profile-header { padding: 20px; }
+    .profile-header h2 { font-size: 23px; }
+    nav { position: static; }
+}
+
+@media print {
+    nav { display: none; }
+    body { background: white; }
+    .profile { break-inside: avoid; box-shadow: none; }
+    header, .profile-header, footer {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✦</div>
+    <div class="subtitle">ACADEMIC PROFILES</div>
+    <h1>الملفات الأكاديمية والعلمية</h1>
+    <p>توثيق للمسيرة العلمية والأكاديمية للكفاءات الجامعية في الأردن</p>
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#khuzayma">الدكتورة خزيمة حماشا</a>
+    <a href="#qassem">الدكتور قاسم مهيدات</a>
+    <a href="#references">المصادر الرسمية</a>
+</nav>
+
+<main id="home">
+
+    <div class="intro">
+        <h2>نبذة أكاديمية موثقة</h2>
+        <div class="gold-line"></div>
+        <p>
+            صفحة تعريفية تعرض المعلومات الأكاديمية المتاحة،
+            والمؤهلات العلمية والمجالات البحثية،
+            مع روابط مباشرة إلى المصادر الجامعية.
+        </p>
+    </div>
+
+    <!-- الملف الأكاديمي الأول -->
+
+    <section class="profile" id="khuzayma">
+
+        <div class="profile-header">
+            <small>جامعة البلقاء التطبيقية | كلية الحصن الجامعية</small>
+            <h2>الدكتورة خزيمة محمود حماشا</h2>
+            <p>الملف الأكاديمي والمسيرة العلمية</p>
+        </div>
+
+        <div class="profile-body">
+
+            <h3>المعلومات الأكاديمية</h3>
+
+            <div class="facts">
+                <div class="fact">
+                    <span>الجامعة</span>
+                    <strong>جامعة البلقاء التطبيقية</strong>
+                </div>
+
+                <div class="fact">
+                    <span>الكلية</span>
+                    <strong>كلية الحصن الجامعية</strong>
+                </div>
+
+                <div class="fact">
+                    <span>القسم</span>
+                    <strong>العلوم الأساسية العلمية</strong>
+                </div>
+
+                <div class="fact">
+                    <span>المسؤولية الأكاديمية المنشورة</span>
+                    <strong>قائم بأعمال رئيس القسم</strong>
+                </div>
+            </div>
+
+            <h3>المسيرة العلمية</h3>
+
+            <p>
+                تُدرج الدكتورة خزيمة حماشا ضمن الكادر الأكاديمي
+                في قسم العلوم الأساسية العلمية بكلية الحصن الجامعية.
+                ويمكن الاستناد إلى صفحات الجامعة الرسمية للتعرف
+                إلى دورها الأكاديمي ومسؤولياتها داخل الكلية.
+            </p>
+
+            <h3>الدكتوراه والمؤهلات العلمية</h3>
+
+            <p>
+                يُخصص هذا القسم لتوثيق درجة الدكتوراه،
+                والجامعة المانحة، والتخصص الدقيق،
+                وعنوان الأطروحة العلمية، بعد التحقق من السيرة الذاتية
+                أو الملف الأكاديمي الرسمي.
+            </p>
+
+            <h3>الأبحاث والإنجازات</h3>
+
+            <p>
+                يمكن إضافة الأبحاث المنشورة، والمشاركات العلمية،
+                والمؤتمرات والجوائز الأكاديمية هنا عند توفر
+                معلومات موثقة من مصادر رسمية.
+            </p>
+
+            <div class="note">
+                <strong>ملاحظة توثيقية:</strong>
+                لم أتمكن من التحقق من إعلان تعيينها نائبةً للعميد
+                أو من تفاصيل الدكتوراه والإنجازات العلمية.
+                يرجى مراجعة الإعلان الجامعي أو صفحة الكلية لتحديث
+                هذه المعلومات بدقة.
+            </div>
+
+            <a class="source"
+               href="https://www.bau.edu.jo/bauar/colleges/huson/basic_sci_Staff.aspx"
+               target="_blank">
+                الكادر الأكاديمي الرسمي
+            </a>
+
+            <a class="source"
+               href="https://www.bau.edu.jo/bauar/colleges/huson/DeanShip.aspx"
+               target="_blank">
+                عمادة كلية الحصن
+            </a>
+
+        </div>
+    </section>
+
+    <!-- الملف الأكاديمي الثاني -->
+
+    <section class="profile" id="qassem">
+
+        <div class="profile-header">
+            <small>جامعة اليرموك | كلية العلوم</small>
+            <h2>الدكتور قاسم إبراهيم مهيدات</h2>
+            <p>الملف الأكاديمي والتخصص البحثي</p>
+        </div>
+
+        <div class="profile-body">
+
+            <h3>المعلومات الأكاديمية</h3>
+
+            <div class="facts">
+                <div class="fact">
+                    <span>الجامعة</span>
+                    <strong>جامعة اليرموك</strong>
+                </div>
+
+                <div class="fact">
+                    <span>الكلية</span>
+                    <strong>كلية العلوم</strong>
+                </div>
+
+                <div class="fact">
+                    <span>القسم</span>
+                    <strong>الفيزياء</strong>
+                </div>
+
+                <div class="fact">
+                    <span>الرتبة الأكاديمية المنشورة</span>
+                    <strong>أستاذ مساعد</strong>
+                </div>
+            </div>
+
+            <h3>المؤهلات العلمية</h3>
+
+            <ul>
+                <li>بكالوريوس في الفيزياء — جامعة اليرموك، 1998.</li>
+                <li>ماجستير في الفيزياء — جامعة اليرموك، 2001.</li>
+                <li>ماجستير في الفيزياء — جامعة واين ستيت، 2009.</li>
+                <li>دكتوراه في الفيزياء — جامعة واين ستيت، 2011.</li>
+            </ul>
+
+            <h3>مجال البحث العلمي</h3>
+
+            <p>
+                يرتبط مجال بحثه بالتحليل الطيفي الذري المعتمد على الليزر،
+                وهو مجال في الفيزياء يستخدم تفاعل الضوء مع الذرات
+                لدراسة خصائصها ومستويات الطاقة وقياساتها.
+            </p>
+
+            <h3>أهمية المجال العلمي</h3>
+
+            <p>
+                تتيح تقنيات التحليل الطيفي دراسة الضوء الذي تمتصه
+                الذرات أو تصدره، وتحليل خصائصه للوصول إلى معلومات
+                دقيقة عن المادة. ويُستخدم هذا النوع من الأساليب
+                في الأبحاث الفيزيائية والقياسات العلمية.
+            </p>
+
+            <a class="source"
+               href="https://fmd.yu.edu.jo/facweb/ProfessorProfile.aspx?AcadURL=muhaidat"
+               target="_blank">
+                الملف الأكاديمي الرسمي
+            </a>
+
+        </div>
+    </section>
+
+    <!-- المصادر -->
+
+    <section class="profile" id="references">
+        <div class="profile-header">
+            <small>المراجع والتوثيق</small>
+            <h2>المصادر الرسمية</h2>
+            <p>روابط للتحقق من المعلومات الأكاديمية</p>
+        </div>
+
+        <div class="profile-body">
+            <ul>
+                <li>
+                    <a href="https://www.bau.edu.jo/"
+                       target="_blank">
+                        الموقع الرسمي لجامعة البلقاء التطبيقية
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.yu.edu.jo/"
+                       target="_blank">
+                        الموقع الرسمي لجامعة اليرموك
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.bau.edu.jo/bauar/colleges/huson/basic_sci_Staff.aspx"
+                       target="_blank">
+                        أعضاء قسم العلوم الأساسية العلمية
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://fmd.yu.edu.jo/facweb/ProfessorProfile.aspx?AcadURL=muhaidat"
+                       target="_blank">
+                        صفحة الدكتور قاسم مهيدات
+                    </a>
+                </li>
+            </ul>
+
+            <div class="note">
+                أُعدّت هذه الصفحة للتعريف الأكاديمي.
+                يجب تحديث المسميات الوظيفية والمؤهلات والأبحاث
+                وفق أحدث المعلومات الرسمية المتاحة.
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <strong>ACADEMIC PROFILES</strong>
+    <p>ملفات أكاديمية | الجامعات الأردنية</p>
+    <p>تصميم تعريفي مستقل لأغراض العرض والتوثيق</p>
+</footer>
+
+</body>
+</html>
